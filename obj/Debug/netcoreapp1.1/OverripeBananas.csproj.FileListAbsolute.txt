@@ -1,0 +1,9 @@
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\bin\Debug\netcoreapp1.1\OverripeBananas.deps.json
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\bin\Debug\netcoreapp1.1\OverripeBananas.runtimeconfig.json
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\bin\Debug\netcoreapp1.1\OverripeBananas.runtimeconfig.dev.json
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\bin\Debug\netcoreapp1.1\OverripeBananas.dll
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\obj\Debug\netcoreapp1.1\OverripeBananas.csprojResolveAssemblyReference.cache
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\obj\Debug\netcoreapp1.1\OverripeBananas.AssemblyInfo.cs
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\bin\Debug\netcoreapp1.1\OverripeBananas.pdb
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\obj\Debug\netcoreapp1.1\OverripeBananas.dll
+c:\users\mhyman\documents\visual studio 2017\Projects\OverripeBananas\OverripeBananas\obj\Debug\netcoreapp1.1\OverripeBananas.pdb

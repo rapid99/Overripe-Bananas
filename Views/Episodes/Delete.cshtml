@@ -1,0 +1,77 @@
+@model OverripeBananas.Models.Episodes
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Episodes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ID" />
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShowName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EpisodeNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EpisodeNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EpisodeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EpisodeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BestCharacter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BestCharacter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HumorRating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HumorRating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StoryRating)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StoryRating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OverallGrade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OverallGrade)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

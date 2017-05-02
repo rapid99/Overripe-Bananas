@@ -1,0 +1,83 @@
+@model IEnumerable<OverripeBananas.Models.Episodes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShowName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Season)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EpisodeNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EpisodeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BestCharacter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HumorRating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StoryRating)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OverallGrade)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShowName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpisodeNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpisodeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BestCharacter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HumorRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoryRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OverallGrade)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

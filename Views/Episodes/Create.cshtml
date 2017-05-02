@@ -1,0 +1,91 @@
+@model OverripeBananas.Models.Episodes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Episodes</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="ShowName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ShowName" class="form-control" />
+                <span asp-validation-for="ShowName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Season" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Season" class="form-control" />
+                <span asp-validation-for="Season" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EpisodeNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EpisodeNumber" class="form-control" />
+                <span asp-validation-for="EpisodeNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EpisodeName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EpisodeName" class="form-control" />
+                <span asp-validation-for="EpisodeName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BestCharacter" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BestCharacter" class="form-control" />
+                <span asp-validation-for="BestCharacter" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HumorRating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HumorRating" class="form-control" />
+                <span asp-validation-for="HumorRating" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="StoryRating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="StoryRating" class="form-control" />
+                <span asp-validation-for="StoryRating" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OverallGrade" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OverallGrade" class="form-control" />
+                <span asp-validation-for="OverallGrade" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
