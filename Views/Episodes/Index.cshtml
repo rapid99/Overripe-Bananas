@@ -1,10 +1,10 @@
 @model IEnumerable<OverripeBananas.Models.Episodes>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Episodes";
 }
 
-<h2>Index</h2>
+<h2>Episodes</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -70,7 +70,9 @@
                 @Html.DisplayFor(modelItem => item.StoryRating)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OverallGrade)
+                @*~~~overall grade calculation~~~~~~*@
+
+                @(item.HumorRating + item.StoryRating)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
