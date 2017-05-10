@@ -4,30 +4,37 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 class="yellowFont">Edit</h2>
 
 <form asp-action="Edit">
     <div class="form-horizontal">
-        <h4>Show</h4>
+        <h4 class="yellowFont">Show</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="ID" />
         <div class="form-group">
-            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <label asp-for="Title" class="col-md-2 control-label yellowFont"></label>
             <div class="col-md-10">
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Genre" class="col-md-2 control-label"></label>
+            <label asp-for="Genre" class="col-md-2 control-label yellowFont"></label>
             <div class="col-md-10">
                 <input asp-for="Genre" class="form-control" />
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Rating" class="col-md-2 control-label"></label>
+            <label asp-for="Description" class="col-md-2 control-label yellowFont"></label>
+            <div class="col-md-10">
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rating" class="col-md-2 control-label yellowFont"></label>
             <div class="col-md-10">
                 <input asp-for="Rating" class="form-control" />
                 <span asp-validation-for="Rating" class="text-danger"></span>
@@ -35,14 +42,14 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </div>
     </div>
 </form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="btn btn-info">Back to List</a>
 </div>
 
 @section Scripts {

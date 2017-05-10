@@ -81,7 +81,7 @@ namespace OverripeBananas.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Genre,Rating")] Show show)
+        public async Task<IActionResult> Create([Bind("ID,Title,Genre,Rating,Description")] Show show)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +113,7 @@ namespace OverripeBananas.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Genre,Rating")] Show show)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Genre,Rating,Description")] Show show)
         {
             if (id != show.ID)
             {

@@ -4,13 +4,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Shows</h2>
+<h1 style="color:#f8e61f;">Shows</h1>
 
 <p>
-    <a class="btn btn-default btn-md" asp-action="Create" style="width: 120px;">Add New Show</a>
+    <a class="btn btn-info btn-md" asp-action="Create" style="width: 120px; margin-top: 10px;">Add New Show</a>
 </p>
 
-<button type="button" class="btn btn-default btn-md" data-toggle="modal" data-target="#myModal" style="margin-bottom: 45px; width: 120px;">Filter Shows</button>
+<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal" style="margin-bottom: 25px; width: 120px;">Filter Shows</button>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -21,46 +21,59 @@
                 <h4 class="modal-title">Filter by...</h4>
             </div>
             <div class="modal-body">
-                @Html.Partial("~/Views/Shows/Filter.cshtml", Model)
+                @Html.Partial("~/Views/Shows/_Filter.cshtml", Model)
             </div>
         </div>
     </div>
 </div>
 
 
-<table class="table">
-    <thead>
+<table class="table stripe row-border order-column table-hover" id="showGrid" style="background-color:#f8e61f;">
+    <thead class="table-bordered">
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.shows[0].Title)
+                <th style="border-right: 1px dashed grey; text-align: center;">
+                    @Html.DisplayNameFor(model => model.shows[0].Title)<span class="glyphicon glyphicon-filter"></span>
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.shows[0].Genre)
+                <th style="border-right: 1px dashed grey; text-align: center;">
+                    @Html.DisplayNameFor(model => model.shows[0].Genre)<span class="glyphicon glyphicon-filter"></span>
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.shows[0].Rating)
+                <th style="border-right: 1px dashed grey; text-align: center; width: 50%;">
+                    @Html.DisplayNameFor(model => model.shows[0].Description)<span class="glyphicon glyphicon-filter"></span>
+                </th>
+                <th style="border-right: 1px dashed grey; text-align: center; width: 10%;">
+                    @Html.DisplayNameFor(model => model.shows[0].Rating)<span class="glyphicon glyphicon-filter"></span>
                 </th>
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-bordered">
 @foreach (var item in Model.shows) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
+            <td style="border-right: 1px dashed grey; text-align: center;">
+                @*@Html.ActionLink(item.Title, "Index", "Episodes", new { showName = item.Title }, null)*@
+
+                <a asp-action="Details" asp-route-id="@item.ID">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </a>
+
             </td>
-            <td>
+            <td style="border-right: 1px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.Genre)
             </td>
-            <td>
+            <td style="border-right: 1px dashed grey; text-align: center;">
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td style="border-right: 1px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            <td style="border-right: 1px dashed grey; text-align: center;">
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info" style="width: 66px;">Edit  </a>
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }
     </tbody>
+    <tfoot>
+
+    </tfoot>
 </table>

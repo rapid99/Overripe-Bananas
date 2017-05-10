@@ -4,12 +4,12 @@
     ViewData["Title"] = "Episodes";
 }
 
-<h2>Episodes</h2>
+<h2 style="color:#f8e61f;">Episodes</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-info" asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table stripe row-border order-column" id="episodeGrid" style="background-color:#f8e61f;">
     <thead>
         <tr>
                 <th>
@@ -39,10 +39,13 @@
                 <th>
                     @Html.DisplayNameFor(model => model.OverallGrade)
                 </th>
+                <th>
+
+                </th>
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-bordered">
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -71,6 +74,7 @@
             </td>
             <td>
                 @*~~~overall grade calculation~~~~~~*@
+                @*TODO: showing sum of properties, but overall grade is still not populated*@
 
                 @(item.HumorRating + item.StoryRating)
             </td>
@@ -82,4 +86,7 @@
         </tr>
 }
     </tbody>
+    <tfoot>
+
+    </tfoot>
 </table>

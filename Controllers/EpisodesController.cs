@@ -19,13 +19,13 @@ namespace OverripeBananas.Controllers
         }
 
         // GET: Episodes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string showName)
         {
             return View(await _context.Episodes.ToListAsync());
         }
-
+        
         // GET: Episodes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int? id, string showName)
         {
             if (id == null)
             {

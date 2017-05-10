@@ -8,9 +8,10 @@ using OverripeBananas.Models;
 namespace OverripeBananas.Migrations
 {
     [DbContext(typeof(OverripeBananasContext))]
-    partial class OverripeBananasContextModelSnapshot : ModelSnapshot
+    [Migration("20170508025112_Description")]
+    partial class Description
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")

@@ -39,5 +39,6 @@ namespace OverripeBananas.Models
         [Display(Name = "Overall Grade")]
         [Required]
         public int OverallGrade { get; set; }
+
     }
 }

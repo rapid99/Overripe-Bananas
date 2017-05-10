@@ -35,3 +35,11 @@ textarea {
         display: none;
     }
 }
+
+.yellowFont {
+    color: #f8e61f;
+}
+
+.yellowBG {
+    background-color: #f8e61f;
+}
