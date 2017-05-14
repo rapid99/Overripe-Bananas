@@ -9,6 +9,7 @@
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -28,14 +29,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Overripe Bananas</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <img src="~/images/or_bananas.png" alt="bananas" style="width: 90px; margin-top: -25px; height: 70px;" />
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
-                    <li><a asp-area="" asp-controller="Episodes" asp-action="Index">Episode Reviews</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Shows" asp-action="Index" style="color: #754d01;">Shows</a></li>
+                    <li><a asp-area="" asp-controller="Episodes" asp-action="Index" style="color: #754d01;">Episode Reviews</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About" style="color: #754d01;">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="color: #754d01;">Contact</a></li>
                 </ul>
             </div>
         </div>

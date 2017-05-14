@@ -4,12 +4,12 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="yellowFont">Details</h2>
 
 <div>
-    <h4>Episodes</h4>
+    <h4 class="yellowFont">Episodes</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal yellowFont">
         <dt>
             @Html.DisplayNameFor(model => model.ShowName)
         </dt>
@@ -67,6 +67,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="yellowBG btn btn-default">Edit</a> |
+    <a asp-action="Index"  class="yellowBG btn btn-default">Back to List</a>
 </div>

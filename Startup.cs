@@ -34,6 +34,7 @@ namespace OverripeBananas
 
             services.AddDbContext<OverripeBananasContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("OverripeBananasContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

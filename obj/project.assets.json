@@ -1871,6 +1871,9 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NonFactors.Grid.Mvc5/3.4.0": {
+        "type": "package"
+      },
       "NuGet.Frameworks/3.5.0": {
         "type": "package",
         "dependencies": {
@@ -5750,6 +5753,22 @@
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NonFactors.Grid.Mvc5/3.4.0": {
+      "sha512": "HBTCT6jTv2XOAoFdU4KXptt6T1H1wG1m0DTaGwHhEUdPKVrvRPN4uTTxUtVFBxdQYDHZu3ill2UL6Dhp1ZRRvQ==",
+      "type": "package",
+      "path": "nonfactors.grid.mvc5/3.4.0",
+      "files": [
+        "content/Content/MvcGrid/mvc-grid.css",
+        "content/Scripts/MvcGrid/mvc-grid.js",
+        "content/Scripts/MvcGrid/mvc-grid.min.js",
+        "content/Views/Shared/MvcGrid/_AjaxGrid.cshtml",
+        "content/Views/Shared/MvcGrid/_Grid.cshtml",
+        "content/Views/Shared/MvcGrid/_Pager.cshtml",
+        "content/Views/Web.config.transform",
+        "nonfactors.grid.mvc5.3.4.0.nupkg.sha512",
+        "nonfactors.grid.mvc5.nuspec"
       ]
     },
     "NuGet.Frameworks/3.5.0": {
@@ -10745,7 +10764,8 @@
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.1",
       "Microsoft.VisualStudio.Web.BrowserLink >= 1.1.2",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 1.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 1.1.1",
+      "NonFactors.Grid.Mvc5 >= 3.4.0"
     ]
   },
   "packageFolders": {
@@ -10771,6 +10791,10 @@
     "frameworks": {
       "netcoreapp1.1": {
         "dependencies": {
+          "NonFactors.Grid.Mvc5": {
+            "target": "Package",
+            "version": "3.4.0"
+          },
           "Microsoft.AspNetCore": {
             "target": "Package",
             "version": "1.1.2"

@@ -51,10 +51,10 @@
         <tr>
             <td style="border-right: 1px dashed grey; text-align: center;">
                 @*@Html.ActionLink(item.Title, "Index", "Episodes", new { showName = item.Title }, null)*@
-
                 <a asp-action="Details" asp-route-id="@item.ID">
                     @Html.DisplayFor(modelItem => item.Title)
                 </a>
+
 
             </td>
             <td style="border-right: 1px dashed grey; text-align: center;">
@@ -67,7 +67,7 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td style="border-right: 1px dashed grey; text-align: center;">
-                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info" style="width: 66px;">Edit  </a>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info" style="width: 66px;">Edit</a>
                 <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a>
             </td>
         </tr>

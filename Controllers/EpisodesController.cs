@@ -20,8 +20,10 @@ namespace OverripeBananas.Controllers
 
         // GET: Episodes
         public async Task<IActionResult> Index(string showName)
-        {
+        { 
+            
             return View(await _context.Episodes.ToListAsync());
+
         }
         
         // GET: Episodes/Details/5
@@ -57,6 +59,7 @@ namespace OverripeBananas.Controllers
         {
             if (ModelState.IsValid)
             {
+                episodes.OverallGrade = episodes.HumorRating + episodes.StoryRating;
                 _context.Add(episodes);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -96,6 +99,7 @@ namespace OverripeBananas.Controllers
             {
                 try
                 {
+                    episodes.OverallGrade = episodes.HumorRating + episodes.StoryRating;
                     _context.Update(episodes);
                     await _context.SaveChangesAsync();
                 }

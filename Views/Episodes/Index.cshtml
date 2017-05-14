@@ -1,5 +1,6 @@
 @model IEnumerable<OverripeBananas.Models.Episodes>
 
+
 @{
     ViewData["Title"] = "Episodes";
 }
@@ -12,31 +13,31 @@
 <table class="table stripe row-border order-column" id="episodeGrid" style="background-color:#f8e61f;">
     <thead>
         <tr>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.ShowName)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.Season)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.EpisodeNumber)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.EpisodeName)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.BestCharacter)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.HumorRating)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.StoryRating)
                 </th>
-                <th>
+                <th style="border-right: 3px dashed grey; text-align: center;">
                     @Html.DisplayNameFor(model => model.OverallGrade)
                 </th>
                 <th>
@@ -46,42 +47,40 @@
         </tr>
     </thead>
     <tbody class="table-bordered">
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShowName)
+            <td style="border-right: 3px dashed grey; text-align: center;">
+                <a asp-action="Details" asp-route-id="@item.ID">
+                    @Html.DisplayFor(modelItem => item.ShowName)
+                </a>
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.Season)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.EpisodeNumber)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.EpisodeName)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.BestCharacter)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.HumorRating)
             </td>
-            <td>
+            <td style="border-right: 3px dashed grey; text-align: center;">
                 @Html.DisplayFor(modelItem => item.StoryRating)
             </td>
-            <td>
-                @*~~~overall grade calculation~~~~~~*@
-                @*TODO: showing sum of properties, but overall grade is still not populated*@
-
-                @(item.HumorRating + item.StoryRating)
+            <td style="border-right: 3px dashed grey; text-align: center;">
+                @Html.DisplayFor(modelItem => item.OverallGrade) 
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            <td style="width: 175px;">
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-info" style="width: 66px; margin-left: 10px;">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger" style="margin-left: 3px;">Delete</a>
             </td>
         </tr>
 }
